@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-export interface HomePageProps {
+interface HomePageProps {
 }
 
-export default class HomePage extends React.Component<HomePageProps, any> {
-  public render() {
-    return (
-      <>
-        HOME
-      </>
-    );
-  }
-}
+const HomePage: React.FunctionComponent<HomePageProps> = (props) => {
+  return (
+    <>
+      HOME
+    </>
+  );
+};
+
+export default HomePage;

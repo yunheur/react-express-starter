@@ -1,14 +1,14 @@
+import NotFound from 'components/common/NotFound';
 import * as React from 'react';
 
-export interface NotFoundPageProps {
+interface NotFoundPageProps {
+  history: any;
 }
 
-export default class NotFoundPage extends React.Component<NotFoundPageProps, any> {
-  public render() {
-    return (
-      <>
-        NotFoundPage
-      </>
-    );
-  }
-}
+const NotFoundPage: React.FunctionComponent<NotFoundPageProps> = ({ history }) => {
+  return (
+    <NotFound onGoBack={history.goBack}/>
+  );
+};
+
+export default NotFoundPage;
