@@ -1,13 +1,13 @@
 .not-found {
-  height: 100vh;
-  background: $oc-gray-1;
   display: flex;
+  background: $oc-gray-1;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  height: 100vh;
+  justify-content: center;
   h2 {
-    font-size: 1.5rem;
     color: black;
+    font-size: 1.5rem;
     font-weight: 400;
   }
 }
