@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const Root: React.FunctionComponent = () => (
   <BrowserRouter>
-    <App/>
+    <App />
   </BrowserRouter>
 );
 

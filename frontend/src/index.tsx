@@ -5,7 +5,7 @@ import * as serviceWorker from 'serviceWorker';
 import 'styles/base.scss';
 
 const render = () => {
-  if(process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === 'development') {
     return ReactDOM.render(<Root />, document.getElementById('root'));
   }
 };

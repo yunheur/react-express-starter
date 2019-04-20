@@ -9,12 +9,10 @@ interface NotFoundProps {
   onGoBack: void;
 }
 
-const NotFound: React.FunctionComponent<NotFoundProps> = ({onGoBack}) => (
+const NotFound: React.FunctionComponent<NotFoundProps> = ({ onGoBack }) => (
   <div className={cx('not-found')}>
-    <h2>
-      존재하지 않는 페이지입니다.
-    </h2>
-    <Button onClick ={onGoBack} theme="gray">
+    <h2>존재하지 않는 페이지입니다.</h2>
+    <Button onClick={onGoBack} theme="gray">
       돌아가기
     </Button>
   </div>

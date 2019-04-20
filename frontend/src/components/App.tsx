@@ -7,8 +7,8 @@ export default class App extends React.Component {
     return (
       <>
         <Switch>
-          <Route exact={true} path="/" component={HomePage}/>
-          <Route component={NotFoundPage}/>
+          <Route exact={true} path="/" component={HomePage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </>
     );

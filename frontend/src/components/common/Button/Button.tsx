@@ -5,7 +5,9 @@ import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Div: React.FunctionComponent = ({children, ...rest}) => <div {...rest}>{children}</div>;
+const Div: React.FunctionComponent = ({ children, ...rest }) => (
+  <div {...rest}>{children}</div>
+);
 
 interface ButtonProps {
   disabled: boolean;
@@ -17,20 +19,21 @@ interface ButtonProps {
 const defaultButtonProps = {
   disabled: false,
   onClick: null,
-  theme : 'gray',
+  theme: 'gray',
   to: null,
 };
 
 class Button extends React.Component<ButtonProps> {
   public static defaultProps = defaultButtonProps;
   public render() {
-    const {children, to, onClick, disabled, theme} = this.props;
-    const Element = (to && !disabled) ? Link : Div;
+    const { children, to, onClick, disabled, theme } = this.props;
+    const Element = to && !disabled ? Link : Div;
     return (
       <Element
         to={to}
-        className={cx('button', theme, {disabled})}
-        onClick={disabled ? () => null : onClick}>
+        className={cx('button', theme, { disabled })}
+        onClick={disabled ? () => null : onClick}
+      >
         {children}
       </Element>
     );

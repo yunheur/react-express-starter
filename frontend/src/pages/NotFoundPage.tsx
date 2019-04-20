@@ -5,10 +5,10 @@ interface NotFoundPageProps {
   history: any;
 }
 
-const NotFoundPage: React.FunctionComponent<NotFoundPageProps> = ({ history }) => {
-  return (
-    <NotFound onGoBack={history.goBack}/>
-  );
+const NotFoundPage: React.FunctionComponent<NotFoundPageProps> = ({
+  history,
+}) => {
+  return <NotFound onGoBack={history.goBack} />;
 };
 
 export default NotFoundPage;
